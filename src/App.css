@@ -1,0 +1,58 @@
+/* src/App.css */
+:root {
+  --moto-black: #0b0b0b;
+  --moto-card: #151517;
+  --moto-yellow: #e1ff00;
+  --moto-border: #2a2a2c;
+}
+
+body {
+  background-color: var(--moto-black) !important;
+}
+
+.card-custom {
+  background-color: var(--moto-card) !important;
+  border: 1px solid var(--moto-border) !important;
+  border-radius: 12px;
+}
+
+.text-yellow { color: var(--moto-yellow) !important; }
+
+.btn-process {
+  background-color: var(--moto-yellow) !important;
+  color: black !important;
+  font-weight: bold;
+  border: none;
+}
+
+.upload-area {
+  border: 2px dashed var(--moto-border);
+  border-radius: 12px;
+  background-color: #0e0e0f;
+}
+
+/* Navbar animations */
+.nav-link {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--moto-yellow) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--moto-yellow);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
